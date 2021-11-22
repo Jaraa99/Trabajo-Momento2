@@ -1,0 +1,47 @@
+
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<body>
+    <script src="objeto.js"></script>
+</body>
+</html>
+
+class Student {
+    //metodo constructor
+    constructor(nombre,edad,estado){
+        this.nombre=nombre;
+        this.edad=edad;
+        this.estado=estado;
+
+    }
+    mostrarNombre (){
+        console.log("Mi nombre es:"+this.nombre);
+    }
+
+}
+//const objeto=new Student("nombre", 12, false); 
+
+class StudentCollege extends Student{
+    constructor(nombre,edad,estado){
+        super(nombre,edad,estado);//propiedades de la clase padre//props
+        this.materias=[];//me crea una lista en blanco
+    }
+    agregarMateria(materia){
+        this.materias.push(materia);//el push permite agregar un nuevo elemento al array
+    }
+}
+const pepito=new Student("jose",19,false);
+//objeto hijo
+const objetoHijo=new StudentCollege("NombreHijo",34,false);
+//permite crear un arrai y a la vez mas valores
+
+function Estudiante(nombre,edad,estado){
+    this.nombre=nombre;
+    this.edad=edad;
+    //es un prototipo
+}
